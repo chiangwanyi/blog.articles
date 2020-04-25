@@ -1,4 +1,4 @@
-# 使用 Portainer 在 Docker 上 安装 MongoDB
+# 使用 Portainer 安装 MongoDB
 
 ## 1. 在主机创建挂载点
 

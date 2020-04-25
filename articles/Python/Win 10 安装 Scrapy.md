@@ -17,7 +17,7 @@ Python 3.8.2
 
 在[这个网站](https://www.lfd.uci.edu/~gohlke/pythonlibs/)查找`Twisted`，然后根据 Python 版本下载对应的`whl`
 
-![image-20200421163352909](Win 10 安装 Scrapy.assets/image-20200421163352909.png)
+![image-20200421163352909](http://q8aqauxg5.bkt.clouddn.com/blog/image-20200421163352909.png)
 
 注意：这里的位数为 Python 的位数，而非系统位数
 

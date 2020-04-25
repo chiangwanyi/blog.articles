@@ -57,7 +57,7 @@
 
 # 2. 将项目设置为 Web 项目
 
-![image-20200405113857205](IDEA 创建 SpringMVC 基础环境（注解版）.assets/image-20200405113857205.png)
+![image-20200405113857205](http://q8aqauxg5.bkt.clouddn.com/blog/image-20200405113857205.png)
 
 # 3. `web.xml`核心配置
 

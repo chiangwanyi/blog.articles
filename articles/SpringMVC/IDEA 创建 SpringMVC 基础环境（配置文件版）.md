@@ -32,7 +32,7 @@
 ```
 # 2. 将项目设置为 Web 项目
 
-![image-20200405113857205](IDEA 创建 SpringMVC 基础环境（配置文件版）.assets/image-20200405113857205.png)
+![image-20200405113857205](http://q8aqauxg5.bkt.clouddn.com/blog/image-20200405113857205.png)
 
 # 3. 配置`DispatchServlet`
 
@@ -151,4 +151,4 @@ public class TestController implements Controller {
 
 # 6. 确保项目 `Artifacts` 的`lib` 目录有项目的所有依赖
 
-![image-20200405131850839](IDEA 创建 SpringMVC 基础环境（配置文件版）.assets/image-20200405131850839.png)
+![image-20200405131850839](http://q8aqauxg5.bkt.clouddn.com/blog/image-20200405131850839.png)
