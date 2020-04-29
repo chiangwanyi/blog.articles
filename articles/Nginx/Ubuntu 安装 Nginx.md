@@ -2,7 +2,7 @@
 
 ## 1. 安装 Nginx
 
-```shell
+```bash
 apt install nginx
 ```
 
@@ -24,7 +24,7 @@ Nginx的配置文件一般在 `/etc/nginx` 目录下，通常情况，Nginx 会�
 我们可以把自己网站的代理配置文件放置到`/etc/nginx/sites-enabled/*`下，方便区分
 
 ### 3.1 nginx.conf 基本配置说明
-```config
+```nginx
 # 运行用户
 user www-data;
 
@@ -95,7 +95,7 @@ http {
 如果我们想使用自己的配置文件搭建反向代理项目，可以去修改`/etc/nginx/sites-enabled/default`配置文件（这是一个`link`，指向了`/etc/nginx/sites-available/default`文件）
 
 如下就是搭建一个代理前后端分离项目的 Nginx 配置文件
-```config
+```nginx
 server {
     # 监听 80 端口
 	listen 80 default_server;

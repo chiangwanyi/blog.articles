@@ -82,9 +82,7 @@ select * from teacher order by salary desc;
 select * from teacher order by salary asc;
 ```
 
-![image-20200416114007232](1. 创建数据库.assets/image-20200416114007232.png)
 
-### 4.2 多表查询
 
 ## 5. 事务
 
@@ -270,10 +268,3 @@ end;
 ```mysql
 call user_cursor();
 ```
-
-
-
-```mysql
-
-```
-
