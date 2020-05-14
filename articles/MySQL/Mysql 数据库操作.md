@@ -1,8 +1,6 @@
-# MySQL 数据库
-
 ## 1. 创建`user`数据库
 
-```mysql
+```sql
 create database user default character 
 set utf8 collate utf8_general_ci;
 ```
@@ -11,7 +9,7 @@ set utf8 collate utf8_general_ci;
 
 ### 2.1 创建`teacher`数据表
 
-```mysql
+```sql
 create table teacher (
 	id int primary key auto_increment comment '教师编号',
 	name varchar(50) not null unique comment '教师姓名',
@@ -169,6 +167,46 @@ call p4('a', @s);
 select @s;
 ```
 
+
+
+例子：求1-100以内的素数和
+
+```mysql
+create procedure prime(out s int)
+begin
+  declare sum int default 0;
+	declare i int default 2;
+	declare j int default 2;
+	declare flag int;
+
+	while i <= 100 do
+		set flag = 1;
+		set j = 2;
+		loop2:begin
+		while j < i do 
+			if i mod j = 0 then
+				set flag = 0;
+				leave loop2;
+			else
+				set j = j + 1;
+			end if;
+		end while;
+		end loop2;
+		if flag = 1 then
+			set sum = sum + i;
+		end if;
+		set i = i + 1;
+	end while;
+	set s = sum;
+end;
+
+call prime(@sum);
+
+select @sum as '1-100素数和';
+```
+
+
+
 ## 7. 自定义函数
 
 ### 7.1 创建自定义函数
@@ -218,6 +256,71 @@ end;
 ```mysql
 select MyAdd(1, 2);
 ```
+
+
+
+例子1：求1-100以内的素数和
+
+```mysql
+drop function if exists prime ;
+create function prime() returns int
+begin
+	declare sum int default 0;
+	declare i int default 2;
+	declare j int default 2;
+	declare flag int;
+
+	while i <= 100 do
+		set flag = 1;
+		set j = 2;
+		loop2:begin
+		while j < i do 
+			if i mod j = 0 then
+				set flag = 0;
+				leave loop2;
+			else
+				set j = j + 1;
+			end if;
+		end while;
+		end loop2;
+		if flag = 1 then
+			set sum = sum + i;
+		end if;
+		set i = i + 1;
+	end while;
+	return sum;
+end;
+
+select prime();
+```
+
+
+
+例子2：求最大公约数与最小公倍数
+
+```mysql
+create function func(a int, b int) returns int
+begin
+	declare t int;
+	declare c int;
+	if a < b then
+		set t = a;
+		set a = b;
+		set b = t;
+	end if;
+	set c = a % b;
+	while c != 0 do
+		set a = b;
+		set b = c;
+		set c = a % b;
+	end while;
+	return b;
+end;
+
+select func(15, 65) as '最大公约数', 15*65/func(15, 65) as '最小公倍数';
+```
+
+
 
 ## 8. 游标
 
