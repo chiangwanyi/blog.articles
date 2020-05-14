@@ -16,9 +16,11 @@
 - MAVEN_HOME：maven 目录
 - PATH：添加 `%MAVEN_HOME%\bin`
 
+> 注意：请确保环境变量中配置了`JAVA_HOME`且值为`JDK`路径，否则后期 Maven 使用可能会出问题（编译打包等功能）
+
 完成后在控制台运行`mvn -version`，出现 maven 的输出信息则表示环境配置成功
 
-![QQ截图20200506091242](https://note-figure-bed.oss-cn-shenzhen.aliyuncs.com/note/QQ截图20200506091242.png)
+![image-20200514144940541](https://note-figure-bed.oss-cn-shenzhen.aliyuncs.com/note/20200514144942.png)
 
 ## 3. 配置阿里云镜像
 
