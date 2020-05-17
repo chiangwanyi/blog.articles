@@ -24,7 +24,7 @@
 
 ## 3. 配置阿里云镜像
 
-使用国内镜像可以提高资源下载速度，在 maven 目录下的 `config/settings/xml`中的`mirrors`添加以下信息：
+使用国内镜像可以提高资源下载速度，在 maven 目录下的 `conf/settings.xml`中的`mirrors`添加以下信息：
 
 ```xml
 <mirror>
