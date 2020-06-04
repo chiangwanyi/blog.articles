@@ -35,6 +35,8 @@
 </mirror>
 ```
 
+
+
 ## 4. 创建本地仓库
 
 用于存放下载的资源，可以放在 maven 目录下，命名为`maven-repo`
@@ -47,4 +49,4 @@
 
 ## 5. IDEA 中配置 Maven
 
-![image-20200506093344034](E:\Program\blog.aritcles\articles\Maven\Maven 环境搭建（win10）.assets\image-20200506093344034.png)
+![image-20200506093344034](https://note-figure-bed.oss-cn-shenzhen.aliyuncs.com/tmp/20200603203243.png)

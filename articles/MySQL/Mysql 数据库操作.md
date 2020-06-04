@@ -174,7 +174,7 @@ select @s;
 ```mysql
 create procedure prime(out s int)
 begin
-  declare sum int default 0;
+    declare sum int default 0;
 	declare i int default 2;
 	declare j int default 2;
 	declare flag int;
